@@ -5,7 +5,6 @@ import (
 	"io"
 	"log"
 	"os"
-	"runtime"
 	"sync"
 	"time"
 
@@ -34,7 +33,7 @@ func main() {
 			}
 			i++
 			if i%1000 == 0 {
-				runtime.GC()
+				// runtime.GC()
 				fmt.Println("sleeping for 5 minutes")
 				time.Sleep(5 * time.Minute)
 				fmt.Println("resuming")
